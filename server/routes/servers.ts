@@ -11,6 +11,6 @@ export const handleGetServers: RequestHandler = async (req, res) => {
     res.json(response);
   } catch (error) {
     console.error("Error getting servers:", error);
-    res.status(500).json({ error: "Failed to retrieve servers" });
+    res.status(200).json({ servers: [] });
   }
 };
