@@ -188,12 +188,15 @@ export default function AdminPanel() {
   };
 
   const confirmDeletePost = async () => {
-    if (!deletingPostId) return;
+    if (!deletingPostId || !authToken) return;
 
     try {
       setIsDeletingPost(true);
       const response = await fetch(`/api/posts/${deletingPostId}`, {
         method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
       });
 
       if (!response.ok) {
