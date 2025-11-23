@@ -48,6 +48,11 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
+  // Authentication routes
+  app.post("/api/auth/login", handleLogin);
+  app.post("/api/auth/logout", handleLogout);
+  app.get("/api/auth/check", handleCheckAuth);
+
   // Debug endpoint to check environment variables
   app.get("/api/debug/env", (_req, res) => {
     const r2Keys = Object.keys(process.env).filter((k) => k.startsWith("R2_"));
