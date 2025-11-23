@@ -453,7 +453,7 @@ export default function Index() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-card border-2 border-border hover:border-accent/50 rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent text-base sm:text-lg transition-all shadow-md hover:shadow-lg"
               />
-              <Search className="absolute right-4 sm:right-5 top-1/2 transform -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground pointer-events-none" />
+              <SearchIcon className="absolute right-4 sm:right-5 top-1/2 transform -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground pointer-events-none" />
             </div>
 
             {/* Categories Section */}
