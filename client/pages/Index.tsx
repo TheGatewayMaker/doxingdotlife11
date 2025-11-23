@@ -514,16 +514,18 @@ export default function Index() {
                         setCountrySearch("");
                       }}
                       className="absolute top-3 right-3 text-accent hover:text-accent/80 transition-colors"
+                      title="Clear selection"
                     >
-                      ✕
+                      <CloseIcon className="w-4 h-4" />
                     </button>
                   )}
                 </div>
 
                 {/* City Dropdown */}
                 <div className="relative group">
-                  <label className="text-sm font-bold text-foreground block mb-2">
-                    🏙️ By City
+                  <label className="text-sm font-bold text-foreground block mb-3 flex items-center gap-2">
+                    <MapPinIcon className="w-4 h-4 text-accent" />
+                    By City
                   </label>
                   <input
                     type="text"
